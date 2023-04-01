@@ -1,0 +1,117 @@
+<!DOCTYPE html>   
+<html>   
+<head>  
+<meta name="viewport" content="width=device-width, initial-scale=1">  
+<title> Login Page </title>  
+<link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700" rel="stylesheet">
+<style>
+  /* Set background color and font styles for the entire page */
+body {
+  background-color: #f5f5f5; /* light gray */
+  font-family: Arial, sans-serif;
+  font-size: 16px;
+  line-height: 1.5;
+  color: #333; /* dark gray */
+}
+
+/* Style the navigation bar */
+nav {
+  background-color: #4682b4; /* steel blue */
+  padding: 20px;
+  margin-bottom: 20px;
+}
+
+nav ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  text-align: right;
+}
+
+nav ul li {
+  display: inline-block;
+}
+
+nav ul li a {
+  color: #fff;
+  font-size: 18px;
+  padding: 10px;
+  text-decoration: none;
+}
+
+nav ul li a:hover {
+  background-color: #fff;
+  color: #4682b4; /* steel blue */
+}
+
+/* Style the heading and form */
+h1 {
+  font-size: 36px;
+  text-align: center;
+  margin-top: 50px;
+  color: #1e8449; /* dark green */
+}
+
+form {
+  width: 50%;
+  margin: auto;
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 5px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+label {
+  font-size: 18px;
+  margin-top: 10px;
+}
+
+input[type="text"],
+input[type="password"] {
+  width: 100%;
+  padding: 10px;
+  margin: 10px 0;
+  border-radius: 5px;
+  border: none;
+  background-color: #f5f5f5;
+  color: #333; /* dark gray */
+}
+
+button {
+  background-color: #1e8449; /* dark green */
+  color: #fff;
+  font-size: 18px;
+  padding: 10px 20px;
+  border-radius: 5px;
+  border: none;
+}
+
+button:hover {
+  background-color: #116234; /* darker green */
+}
+
+</style>
+</head>    
+<body>    
+    <center> <h1> Login Form </h1> </center>   
+    <form method="POST" action="/login">  
+        <div class="container">   
+            <label>Username : </label>   
+            <input type="text" placeholder="Enter Username" name="username" required>  
+            <label>Password : </label>   
+            <input type="text" placeholder="Enter Password" name="password" required>  
+            <button type="submit">Login</button>     
+        </div>   
+    </form>     
+    <main>
+        <p>{{username}}</p>
+        <p>{{password}}</p>
+    </main>
+</body>
+</html>
